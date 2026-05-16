@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+type: dataset
+title: Kossowich Sanskrit-Russian Dictionary
+message: If you use this dataset, please cite both the digital edition and the printed source it digitises.
+license: CC-BY-SA-4.0
+repository-code: https://github.com/sanskrit-lexicon/KOW
+date-released: 1854-01-01
+version: 1.0.0
+keywords:
+  - sanskrit
+  - lexicon
+  - cdsl
+  - cologne-digital-sanskrit-lexicon
+  - dictionary
+  - skt-rus
+authors:
+  - name: "Cologne Digital Sanskrit Lexicon project contributors"
+    website: https://www.sanskrit-lexicon.uni-koeln.de/
+preferred-citation:
+  type: book
+  title: Kossowich Sanskrit-Russian Dictionary
+  year: 1854
+  authors:
+    - family-names: "Коссович"
+      given-names: "Каэтан"
+  notes: "Russian Sanskritist; estimated year"
