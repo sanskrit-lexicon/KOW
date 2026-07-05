@@ -1,5 +1,7 @@
 # KOW — Kossowich Sanskrit-Russian Dictionary
 
+_Created: 21-02-2026 · Last updated: 05-07-2026_
+
 **KOW** is the corrections and build repository for the Cologne Digital Sanskrit Dictionaries digitization of Kaëtan Kossovich's *Sanskrito-russkiy slovar* (Sanskrit-Russian Dictionary, 1854). It is part of the [sanskrit-lexicon](https://github.com/sanskrit-lexicon) organisation at the University of Cologne.
 
 The dictionary contains approximately 13,488 entries across 360 pages in two columns and is one of the earliest Sanskrit-Russian lexicons. Corrections are never made directly to source files — they are expressed as change files applied by scripts.
@@ -83,6 +85,28 @@ No closed issues yet.
 | `medium` | `#fbca04` | Standard unit of work — one index, a batch of corrections |
 | `hard` | `#d93f0b` | Large effort spanning many sources, files, or dictionaries |
 
+## Usage example
+
+`kow.txt` is not in this repo — it lives in the sibling `csl-orig` repo (see [Dependencies in CLAUDE.md](CLAUDE.md) for the exact path). [CLAUDE.md § Annotated Example Entry](CLAUDE.md) documents the format's own reference entry (entry 1, headword *a*, negation-prefix sense):
+
+```
+<L>1<pc>001,1<k1>a<k2>a<e>1
+{#a#} — prefix of negation or privation (like Gr. {%α, αν%}),
+corresponding to Goth. {%un%}, Engl. {%un-, in-%} etc.
+<LEND>
+```
+
+To correct the etymological gloss with the org's `updateByLine.py` workflow, a change file addresses print line 1 with the old/new text pair:
+
+```
+1 old {#a#} — prefix of negation or privation (like Gr. {%α, αν%}),
+1 new {#a#} — prefix of negation or privation (a privativum, cf. Gr. {%α, αν%}),
+```
+
+```sh
+python updateByLine.py kow.txt change_kow_N.txt kow_corrected.txt
+```
+
 ## How it works
 
 ```mermaid
@@ -121,3 +145,5 @@ flowchart LR
 - [@funderburkjim](https://github.com/funderburkjim) — Cologne project maintainer
 - [@gasyoun](https://github.com/gasyoun) — project coordination
 - [Cologne Digital Sanskrit Dictionaries contributors](https://www.sanskrit-lexicon.uni-koeln.de/)
+
+_Dr. Mārcis Gasūns_
