@@ -1,31 +1,47 @@
 # KOW — Kossowich Sanskrit-Russian Dictionary
 
-_Created: 21-02-2026 · Last updated: 05-07-2026_
+_Created: 21-02-2026 · Last updated: 11-07-2026_
 
-**KOW** is the corrections and build repository for the Cologne Digital Sanskrit Dictionaries digitization of Kaëtan Kossovich's *Sanskrito-russkiy slovar* (Sanskrit-Russian Dictionary, 1854). It is part of the [sanskrit-lexicon](https://github.com/sanskrit-lexicon) organisation at the University of Cologne.
+**KOW** is the corrections-and-build repository slot for the Cologne Digital Sanskrit Dictionaries digitization of Kaëtan Kossovich's *Sanskrito-russkiy slovar* (Sanskrit-Russian Dictionary, 1854). It is part of the [sanskrit-lexicon](https://github.com/sanskrit-lexicon) organisation at the University of Cologne.
 
-The dictionary contains approximately 13,488 entries across 360 pages in two columns and is one of the earliest Sanskrit-Russian lexicons. Corrections are never made directly to source files — they are expressed as change files applied by scripts.
+Kossovich's dictionary — an estimated ~13,488 entries across 360 pages in two columns — is one of the earliest Sanskrit-Russian lexicons. This repository is the eventual home for the digitized text and its correction pipeline.
 
-## Contents
+> **Status (11-07-2026): metadata-only stub — the digitized text has not yet been delivered.** No `kow.txt` source file exists in `csl-orig` yet, and there is no scan or build tree in this repository. The paths and pipeline described below are the *intended* structure that becomes active once Cologne delivers the digitized text; they are not present today. This repository currently holds only project metadata (this README, [CLAUDE.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CLAUDE.md), [CITATION.cff](https://github.com/sanskrit-lexicon/KOW/blob/main/CITATION.cff), [changelog.md](https://github.com/sanskrit-lexicon/KOW/blob/main/changelog.md), [LICENSE](https://github.com/sanskrit-lexicon/KOW/blob/main/LICENSE), and a Pages landing page).
+
+## Current repository contents
 
 | Path | Description |
 |---|---|
-| `csl-orig/v02/kow/kow.txt` | Primary digitized source (sibling repo `csl-orig`) |
-| `csl-pywork/v02/` | Build scripts, XML generation, validation |
-| `KOWScan/` | PNG page scans of the printed dictionary |
-| `CLAUDE.md` | Developer notes, data format reference, issue conventions |
-| `CITATION.cff` | Machine-readable academic citation metadata |
+| [README.md](https://github.com/sanskrit-lexicon/KOW/blob/main/README.md) | This file |
+| [CLAUDE.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CLAUDE.md) | Developer notes, intended data-format reference, issue conventions |
+| [CITATION.cff](https://github.com/sanskrit-lexicon/KOW/blob/main/CITATION.cff) | Machine-readable academic citation metadata |
+| [changelog.md](https://github.com/sanskrit-lexicon/KOW/blob/main/changelog.md) | Repository-level change log |
+| [index.html](https://github.com/sanskrit-lexicon/KOW/blob/main/index.html) | GitHub Pages landing page |
+
+## Intended structure (pending source delivery)
+
+Once Cologne delivers the digitized text, the working pipeline follows the standard Cologne dictionary shape. None of these paths exist yet:
+
+| Path | Role (when present) |
+|---|---|
+| `csl-orig/v02/kow/kow.txt` | Primary digitized source (sibling repo [`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig)) — **not yet present** |
+| `csl-pywork/v02/` | Build scripts, XML generation, validation (sibling repo) — **not yet present** |
+| Scan archive | PNG page scans of the printed dictionary — **not yet ingested into the org** |
+
+Corrections in the Cologne project are never made directly to source files — they are expressed as change files applied by scripts. The full correction workflow is documented canonically in [csl-corrections/docs/correction-workflow.md](https://github.com/sanskrit-lexicon/csl-corrections/blob/main/docs/correction-workflow.md); it will apply here once the source exists.
 
 ## Timeline
 
 | Period | Work |
 |---|---|
 | 1854 | Original printed edition by Kaëtan Kossovich, St. Petersburg |
-| 2020+ | Initial digitization and scan repository (`KOWScan`) created |
-| 2025 | Repository established at `sanskrit-lexicon/KOW`; source file ingested |
-| 2026 | Issue triage and taxonomy applied; CLAUDE.md, CITATION.cff added |
+| 2026-02 | Repository slot established at [`sanskrit-lexicon/KOW`](https://github.com/sanskrit-lexicon/KOW) |
+| 2026-05 | Metadata added ([CLAUDE.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CLAUDE.md), [CITATION.cff](https://github.com/sanskrit-lexicon/KOW/blob/main/CITATION.cff)); issue taxonomy (labels, milestones) applied |
+| pending | Cologne delivery of the digitized `kow.txt` source, then ingest → correction → XML build → web display |
 
 ## Projects & Milestones
+
+Live as of 11-07-2026 (via the [GitHub milestones API](https://github.com/sanskrit-lexicon/KOW/milestones)):
 
 | Milestone | Open | Closed |
 |---|---|---|
@@ -39,11 +55,6 @@ pie title Open issues by milestone
   "Major Enhancements" : 1
 ```
 
-```mermaid
-pie title Closed issues by milestone
-  "No closed issues" : 1
-```
-
 ## Issue Typology
 
 ### Open issues
@@ -51,6 +62,8 @@ pie title Closed issues by milestone
 | # | Title | Type | Severity | Milestone |
 |---|---|---|---|---|
 | [#1](https://github.com/sanskrit-lexicon/KOW/issues/1) | Kossowich Sanskrit-Russian Dictionary: Source Files | content-enhancement | medium | Major Enhancements |
+
+Issue [#1](https://github.com/sanskrit-lexicon/KOW/issues/1) tracks exactly the blocker above: obtaining the digitized source files.
 
 ```mermaid
 pie title Open issues by type
@@ -67,7 +80,7 @@ No closed issues yet.
 
 | Label | Color | Description |
 |---|---|---|
-| `link-target` | `#0075ca` | Building click-throughs from `<ls>` abbreviations to scanned PDF pages |
+| `link-target` | `#0075ca` | Building click-throughs from `<ls>` abbreviations to scanned pages |
 | `link-splitting` | `#0075ca` | Splitting combined `SOURCE N,N` refs into individual per-page links |
 | `markup` | `#0075ca` | Normalising XML tag content (`<ls>`, `<lex>`, `<ab>`, etc.) |
 | `text-correction` | `#0075ca` | Corrections to Russian definitions or Sanskrit headwords |
@@ -85,33 +98,13 @@ No closed issues yet.
 | `medium` | `#fbca04` | Standard unit of work — one index, a batch of corrections |
 | `hard` | `#d93f0b` | Large effort spanning many sources, files, or dictionaries |
 
-## Usage example
+## Intended pipeline
 
-`kow.txt` is not in this repo — it lives in the sibling `csl-orig` repo (see [Dependencies in CLAUDE.md](CLAUDE.md) for the exact path). [CLAUDE.md § Annotated Example Entry](CLAUDE.md) documents the format's own reference entry (entry 1, headword *a*, negation-prefix sense):
-
-```
-<L>1<pc>001,1<k1>a<k2>a<e>1
-{#a#} — prefix of negation or privation (like Gr. {%α, αν%}),
-corresponding to Goth. {%un%}, Engl. {%un-, in-%} etc.
-<LEND>
-```
-
-To correct the etymological gloss with the org's `updateByLine.py` workflow, a change file addresses print line 1 with the old/new text pair:
-
-```
-1 old {#a#} — prefix of negation or privation (like Gr. {%α, αν%}),
-1 new {#a#} — prefix of negation or privation (a privativum, cf. Gr. {%α, αν%}),
-```
-
-```sh
-python updateByLine.py kow.txt change_kow_N.txt kow_corrected.txt
-```
-
-## How it works
+The standard Cologne dictionary flow, which becomes active once the source is delivered:
 
 ```mermaid
 flowchart LR
-  S["Print scan PDF"] -->|OCR / keyboarding| R["raw .txt"]
+  S["Print scan"] -->|OCR / keyboarding| R["raw .txt"]
   R --> O["csl-orig/v02/kow/kow.txt"]
   O -->|updateByLine.py| C["change_*.txt corrections"]
   C --> O
@@ -119,13 +112,14 @@ flowchart LR
   X --> A["csl-app web display"]
 ```
 
-## Encoding
+## Intended encoding conventions
+
+When the text arrives it will follow the Cologne conventions:
 
 - UTF-8 NFC throughout.
 - Sanskrit text in SLP1 transliteration, wrapped in `{#...#}`.
-- Display layer uses IAST (ISO 15919) and Devanagari, generated via `transcoder/`.
+- Display layer in IAST (ISO 15919) and Devanagari, generated via `transcoder/`.
 - Russian definitions stored as UTF-8 Cyrillic.
-- Round-trip SLP1 ↔ IAST ↔ Devanagari verified for all entries; exceptions tracked under label `encoding`.
 
 ## Source
 
@@ -134,14 +128,11 @@ flowchart LR
 - **Publisher**: St. Petersburg
 - **Year**: 1854
 - **Print pages**: 360 (2 columns)
-- **Entries**: ~13,488
+- **Estimated entries**: ~13,488
 - **WorldCat**: [1048662463](https://search.worldcat.org/title/1048662463)
-- **Scans**: [Google Drive PNG archive](https://drive.google.com/file/d/1JKJFiB3sl6dmd3jPnkRx68ZUGtqY9qlN/view?usp=drive_fs)
-- **First digitisation**: Cologne Digital Sanskrit Dictionaries, 2020+
 
 ## Contributors
 
-- [@artanat](https://github.com/artanat) — initial digitization
 - [@funderburkjim](https://github.com/funderburkjim) — Cologne project maintainer
 - [@gasyoun](https://github.com/gasyoun) — project coordination
 - [Cologne Digital Sanskrit Dictionaries contributors](https://www.sanskrit-lexicon.uni-koeln.de/)
