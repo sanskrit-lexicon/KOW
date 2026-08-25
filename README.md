@@ -6,7 +6,7 @@ _Created: 21-02-2026 · Last updated: 11-07-2026_
 
 Kossovich's dictionary — an estimated ~13,488 entries across 360 pages in two columns — is one of the earliest Sanskrit-Russian lexicons. This repository is the eventual home for the digitized text and its correction pipeline.
 
-> **Status (11-07-2026): metadata-only stub — the digitized text has not yet been delivered.** No `kow.txt` source file exists in `csl-orig` yet, and there is no scan or build tree in this repository. The paths and pipeline described below are the *intended* structure that becomes active once Cologne delivers the digitized text; they are not present today. This repository currently holds only project metadata (this README, [CLAUDE.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CLAUDE.md), [CITATION.cff](https://github.com/sanskrit-lexicon/KOW/blob/main/CITATION.cff), [changelog.md](https://github.com/sanskrit-lexicon/KOW/blob/main/changelog.md), [LICENSE](https://github.com/sanskrit-lexicon/KOW/blob/main/LICENSE), and a Pages landing page).
+> **Status (11-07-2026): metadata-only stub — the digitized text has not yet been delivered.** No `kow.txt` source file exists in `csl-orig` yet, and there is no scan or build tree in this repository. The paths and pipeline described below are the *intended* structure that becomes active once Cologne delivers the digitized text; they are not present today. This repository currently holds only project metadata (this README, [CLAUDE.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CLAUDE.md), [CITATION.cff](https://github.com/sanskrit-lexicon/KOW/blob/main/CITATION.cff), [CHANGELOG.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CHANGELOG.md), [LICENSE](https://github.com/sanskrit-lexicon/KOW/blob/main/LICENSE), and a Pages landing page).
 
 ## Current repository contents
 
@@ -15,7 +15,7 @@ Kossovich's dictionary — an estimated ~13,488 entries across 360 pages in two 
 | [README.md](https://github.com/sanskrit-lexicon/KOW/blob/main/README.md) | This file |
 | [CLAUDE.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CLAUDE.md) | Developer notes, intended data-format reference, issue conventions |
 | [CITATION.cff](https://github.com/sanskrit-lexicon/KOW/blob/main/CITATION.cff) | Machine-readable academic citation metadata |
-| [changelog.md](https://github.com/sanskrit-lexicon/KOW/blob/main/changelog.md) | Repository-level change log |
+| [CHANGELOG.md](https://github.com/sanskrit-lexicon/KOW/blob/main/CHANGELOG.md) | Repository-level change log |
 | [index.html](https://github.com/sanskrit-lexicon/KOW/blob/main/index.html) | GitHub Pages landing page |
 
 ## Intended structure (pending source delivery)
