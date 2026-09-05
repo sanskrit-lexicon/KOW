@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -113,3 +115,5 @@ Every entry in `kow.txt` follows the Cologne markup format:
 | `minor` | `#e4e669` | Targeted, self-contained fix |
 | `medium` | `#fbca04` | Standard unit of work — one index, a batch of corrections |
 | `hard` | `#d93f0b` | Large effort spanning many sources, files, or dictionaries |
+
+_Dr. Mārcis Gasūns_

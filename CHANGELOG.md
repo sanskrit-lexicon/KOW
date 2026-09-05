@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Changelog
 
 All notable changes to KOW are documented here.
@@ -17,3 +19,5 @@ ready for a dated entry.
 - 2026-05-16 docs(cff): enrich with publication-year + author from inventory (1854, Каэтан Коссович (1815-1883))
 - 2026-05-15 Add CLAUDE.md with codebase guidance for Claude Code
 - 2026-02-21 Initial commit
+
+_Dr. Mārcis Gasūns_
