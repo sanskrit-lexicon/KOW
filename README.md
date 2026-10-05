@@ -1,5 +1,7 @@
 # KOW — Kossowich Sanskrit-Russian Dictionary
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23151346.svg)](https://doi.org/10.5281/zenodo.23151346)
+
 _Created: 21-02-2026 · Last updated: 11-07-2026_
 
 **KOW** is the corrections-and-build repository slot for the Cologne Digital Sanskrit Dictionaries digitization of Kaëtan Kossovich's *Sanskrito-russkiy slovar* (Sanskrit-Russian Dictionary, 1854). It is part of the [sanskrit-lexicon](https://github.com/sanskrit-lexicon) organisation at the University of Cologne.
